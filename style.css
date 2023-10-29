@@ -34,7 +34,7 @@ main {
 
 #topbox {
 	margin: 100px;
-	padding: 20px 100px 100px 20px;
+	padding: 20px 100px 100px 15px;
 	background-color: rgb(7,30,31);
 	border: 2px solid white;
 	border-radius: 15px;
@@ -115,3 +115,6 @@ a {
     background-color: white;
 }
 
+#P2 {
+    padding-top: 2%;
+}
