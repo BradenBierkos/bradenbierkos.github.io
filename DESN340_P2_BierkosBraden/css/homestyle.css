@@ -276,7 +276,6 @@ a.watch-video:hover {
   }
 }
 
-
 /* This is the blue section */
 .below-banner {
   left: auto;
@@ -304,8 +303,6 @@ a.watch-video:hover {
 }
 
 /* THIRD SECTION */
-
-/* Palm Rejection Section */ 
 #third-section {
  	width: 100vw;
  	background-color: #161616;
@@ -316,6 +313,7 @@ a.watch-video:hover {
   	padding-bottom: 3%;
 }
 
+/* Palm Rejection Section */ 
 #palmrejection-section {
 	display: flex;
 	padding-top: 15%;
@@ -326,9 +324,9 @@ a.watch-video:hover {
 }
 
 .thirdsection-icons {
-  	width: 30%;
-  	height: 30%;
-  	padding-bottom: 12%;
+  width: 30%;
+  height: 30%;
+  padding-bottom: 12%;
 }
 
 .thirdsection-images img {
@@ -340,34 +338,38 @@ a.watch-video:hover {
 #eraser-section {
 	display: flex;
 	padding-bottom: 8%;
-  	color: white;
-  	display: flex;
-  	flex-direction: row-reverse;
+  color: white;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .eraser-icon {
-  	width: 30%;
-  	height: 30%;
-  	padding-bottom: 12%;
+  width: 30%;
+  height: 30%;
+  padding-bottom: 12%;
 }
 
 .erase-image img {
 	max-width: 100%;
-  	border-radius: 25px;
+  border-radius: 25px;
+}
+
+.section-text {
+	color: white;
 }
 
 /* Blend Section */
 #blend-section {
 	display: flex;
 	padding-bottom: 15%;
-  	color: white;
-  	display: flex;
-  	flex-direction: row;
+  color: white;
+  display: flex;
+  flex-direction: row;
 }
 
 .blend-image img {
 	max-width: 100%;
-  	border-radius: 25px;
+  border-radius: 25px;
 }
 
 /* Line Separators */
