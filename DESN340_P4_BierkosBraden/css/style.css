@@ -1,8 +1,10 @@
 /* This is the style sheet for Project 3 */
 
-/* This section is for universal selections and rules */
+/* =======================
+   Universal Selections and Rules
+======================= */
 
-/* box model Fix */
+/* Box Model Fix */
 html {
   box-sizing: border-box;
 }
@@ -10,7 +12,7 @@ html {
   box-sizing: inherit;
 }
 
-/* clear Fix */
+/* Clear Fix */
 .row:before,
 .row:after {
   content: " ";
@@ -21,8 +23,12 @@ html {
   clear: both;
 }
 
-/* Character Styles */
+/* =======================
+   Character Styles
+======================= */
+
 h1 { 
+  /* Heading 1 Styles */
 	color: #FFF;
 	text-align: center;
 	font-family: Sofia Sans;
@@ -33,6 +39,7 @@ h1 {
 }
 
 h2 {
+  /* Heading 2 Styles */
 	color: #000;
 	font-family: Sofia Sans;
 	font-size: 50px;
@@ -42,6 +49,7 @@ h2 {
 }
 
 h3 {
+  /* Heading 3 Styles */
 	color: #000;
 	font-family: Sofia Sans;
 	font-size: 35px;
@@ -51,6 +59,7 @@ h3 {
 }
 
 p {
+  /* Paragraph Styles */
 	color: #000;
 	font-family: Lato;
 	font-size: 18px;
@@ -59,7 +68,10 @@ p {
 	line-height: normal;
 }
 
-/* Navigation Bar Style */
+/* =======================
+   Navigation Bar Style
+======================= */
+
 #navigation-bar {
     display: flex;
     justify-content: space-between;
@@ -123,6 +135,10 @@ nav ul li a {
   border: 2px solid #FF1E2A;
 }
 
+#contact-button a:hover {
+    color: black;
+}
+
 #contact-button a {
     text-align: center;
 }
@@ -133,46 +149,42 @@ nav ul li a {
     gap: 100px;
 }
 
-header {
-    background-color: #F6F6F6;
+#contact-button-bootstrap {
+  display: flex;
+  width: 170px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 140px;
+  border: 2px solid #E81E2A;
+  text-align: center; 
 }
 
-.bg-body-tertiary {
+#contact-button-bootstrap:hover {
+  background-color: #F6F6F6;
+  border: 2px solid #FF1E2A;
+}
 
+#contact-button-bootstrap a:hover {
+    color: black;
+}
+
+#contact-button-bootstrap a {
+    text-align: center;
+}
+
+header {
+    background-color: #F6F6F6;
 }
 
 .bg-body-tertiary {
   display: none;
 }
 
-/* Smaller Desktop Screen 1200px */ 
-@media screen and (max-width: 1200px) {
-
-  nav ul {
-    gap: 40px;
-  }
-
-  #navigation-bar {
-    display: none;
-  }
-
-  .navbar-toggler {
-    margin-right: 50px;
-  }
-
-  .navbar-toggler:hover {
-    text-decoration: none;
-  }
-
-  .bg-body-tertiary {
-    display: block;
-  }
-}
-
-/* Hero Style */
+/* Large Banner - Hero Styling */
 .hero {
   position: relative;
-  background-color: black;
+  background-color: black; /* Added incase browser doesn't display image */
   background-image: url("../images/banner-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -205,6 +217,7 @@ header {
   width: 160px;
 }
 
+/* Accomplishment Specific Character Styles  */
 #accomplishments-banner p {
   font-weight: 400;
 }
@@ -224,19 +237,29 @@ header {
 	margin: 0;
 }
 
-/* About Us Section Style */
+/* About Us Section Style Mobile */
+#accomplishments-banner-mobile {
+  display: none;
+}
+
+/* About Us Section Style Tablet  */
+#about-us-tablet {
+  display: none;
+}
+
 #about-us {
+  display: flex;
   background-color: black;
   background-image: url("../images/background-texture.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  gap: 200px;
+  padding: 150px;
+  justify-content: center;
 }
 
 .about-content {
-  max-width: 600px;
-  margin-left: 200px;
+  max-width: 800px;
   padding-bottom: 40px;
 }
 
@@ -250,13 +273,12 @@ header {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+  gap: 30px;
 }
 
-.belowbannerimage img {
-  display: flex;
-  width: 20%;
-  float: right;
-  margin-right: 200px;
+.below-banner-image img {
+    width: 340px;
+    height: auto;
 }
 
 /* Our Process Section Style */
@@ -420,8 +442,8 @@ header {
 /* Services Section Style */
 #services {
   display: flex;
-  margin-left: 160px;
-  margin-right: 160px;
+  margin-left: 270px;
+  margin-right: 270px;
   padding-top: 130px;
 }
 
@@ -446,13 +468,30 @@ header {
   width: 47%;
 }
 
+/* Ptarmigan Background Logo */
+#ptarmigan-background {
+  position: relative;
+  margin: 0;
+  height: 0;
+}
+
+#ptarmigan-background img {
+  position: relative;
+  display: block;
+  transform: translate(-15px, 30px);
+  z-index: 0;
+}
+
 /* Gallery Style */
 #gallery {
   padding-top: 150px;
+  z-index: 2;
+  position: relative;
 }
 
 #gallery h2 {
   text-align: center;
+  padding-bottom: 25px;
 }
 
 #gallery img {
@@ -623,8 +662,81 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Responsive adjustments for Smaller Desktop Screen 1200px */
+@media screen and (max-width: 1200px) {
+  nav ul {
+    gap: 40px;
+  }
+
+  #navigation-bar {
+    display: none;
+  }
+
+  .navbar-toggler {
+    margin-right: 50px;
+  }
+
+  .bg-body-tertiary {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .navbar-toggler:hover {
+    text-decoration: none;
+  }
+
+  .bg-body-tertiary {
+    display: block;
+  }
+
+  #about-us {
+    gap: 80px;
+  }
+
+  .about-content {
+    max-width: 540px;
+    padding-bottom: 40px;
+  }
+
+  .mission-vision {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 30px;
+  } /* Make sure this curly brace is added */
+
+  #services {
+    display: flex;
+    margin-left: 130px;
+    margin-right: 130px;
+    padding-top: 130px;
+  }
+
+  #ptarmigan-background img {
+    position: relative;
+    display: block;
+    transform: translate(-15px, 70px);
+    z-index: 0;
+    width: 200px;
+  }
+}
+
+
+/* =======================
+   Responsive Adjustments
+======================= */
+
 /* Responsive adjustments for Tablet 768px */
 @media screen and (max-width: 769px) {
+  #logo1 {
+    display: block;
+  }
+
+  #logo2 {
+    display: none;
+  }
+  
   h1 { 
   color: #FFF;
   text-align: center;
@@ -725,22 +837,31 @@ footer a:hover {
     padding-bottom: 300px;
   }
 
-  #about-us {
-    padding-bottom: 100px;
+  .about-content {
+    margin-left: 20px;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 40px; 
+  }
+
+  .belowbannerimage img {
+    width: 100%; 
+    max-width: 250px; 
+    margin-left: auto; 
+    margin-right: 0; 
   }
 
   .about-content {
-    margin-left: 20px;
-    max-width: 90%; 
+    max-width: 60%; 
     margin: 0; 
-    float: none; 
-    padding-left: 60px;
   }
 
   .belowbannerimage img {
     margin-left: 60px;
     margin-bottom: 30px;
-    width: 30%; 
+    width: 70%; 
     float: none; 
     margin-right: 0; 
   }
@@ -750,6 +871,21 @@ footer a:hover {
   }
 
   #steps img {
+    display: none;
+  }
+
+  #about-us-tablet {
+    display: block;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    display: flex;
+    background-color: black;
+    background-image: url(../images/background-texture.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #about-us {
     display: none;
   }
 
@@ -773,7 +909,7 @@ footer a:hover {
   #services {
     display: block;
     padding-bottom: 0;
-    padding-top: 100px;
+    padding-top: 110px;
     margin: 50px;
   }
 
@@ -794,21 +930,21 @@ footer a:hover {
     width: 47%;
   }
   
+  #ptarmigan-background img {
+    width: auto;
+    height: 125px;
+    transform: translate(-15px, 110px);
+  }
+
   #gallery h2 {
-    padding-top: 100px;
+    padding-top: 0;
     padding-bottom: 25px;
   }
-  
 }
 
-/* Default styles for larger screens */
-@media screen and (min-width: 769px) {
-  #logo1 {
-    display: block;
-  }
-
-  #logo2 {
-    display: none;
+@media screen and (min-width: 1200px) {
+  #about-us {
+    padding: 150px;
   }
 }
 
@@ -869,22 +1005,65 @@ footer a:hover {
   }
 
   .hero {
-  position: relative;
-  background-color: black;
-  background-image: url("../images/banner-image.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  width: 100%;
-  flex-shrink: 0;
-  height: 276px;
-  flex-shrink: 0;
-  padding-top: 250px;
+    position: relative;
+    background-color: black;
+    background-image: url("../images/banner-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    width: 100%;
+    flex-shrink: 0;
+    height: 276px;
+    flex-shrink: 0;
+    padding-top: 250px;
+  }
+
+  #accomplishments-banner {
+    display: none;
+  }
+
+  #mobile-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #accomplishments-banner-mobile {
+    display: block;
+    text-align: center;
+  }
+
+  #accomplishments-banner-mobile h3 {
+    font-size: 35px;
+    color: #FF1E2A;
+  }
+
+  #accomplishments-banner-mobile p {
+    color: black;
+  }
+
+  #about-us {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 30px;
+  }
+
+  .about-content {
+    max-width: 100%;
+    padding-top: 0;
+    margin: 0;
+  }
+
+  #about-us-tablet {
+    display: none;
   }
 
   .belowbannerimage img {
-    width: 60%;
+    display: none;
   }
 
   .mission-vision {
@@ -993,10 +1172,6 @@ footer a:hover {
     width: 90%;
   }
 
-  #accomplishments-banner {
-    display: none;
-  }
-
   .about-content {
     margin-left: 20px;
     max-width: 100%;
@@ -1022,6 +1197,10 @@ footer a:hover {
     flex-direction: column;
     width: 45%;
     margin-right: 20px;
+  }
+
+  #ptarmigan-background img {
+    display: none;
   }
 
   #gallery {
